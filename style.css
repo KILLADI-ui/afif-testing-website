@@ -1,0 +1,384 @@
+@font-face {
+  font-family: "Aerial_Demo";
+  src: url(Aerial_Demo.ttf);
+}
+@font-face {
+  font-family: "Coastfast";
+  src: url("Coastfast.ttf");
+}
+@font-face {
+  font-family: "Hunters K-Pop";
+  src: url("Hunters K-Pop.otf");
+}
+@font-face {
+  font-family: "CreatoDisplay-Regular";
+  src: url("CreatoDisplay-Regular.otf");
+}
+
+body {
+  margin: 0;
+}
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgb(132, 39, 255), #9156ff);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+}
+.menu {
+  position: absolute;
+  left: 55px;
+  top: 78px;
+  width: 65px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.4s;
+  animation: menu 1s ease;
+}
+
+.menu span {
+  height: 7px;
+  background-color: #dbd0f7;
+  border-radius: 2px;
+  box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+
+.nav-container {
+  position: absolute;
+  right: 55px;
+  top: 35px;
+  width: 756px;
+  height: 90px;
+  background-color: #5f30cc;
+  border-radius: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 40px;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25);
+  gap: 150px;
+  animation: sukuna-2 0.5s ease-out;
+}
+.Home {
+  text-decoration: none;
+  font-family: Georgia;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1;
+  color: white;
+  transition: 0.4s;
+}
+.Home:hover {
+  color: #9156ff;
+}
+.About {
+  text-decoration: none;
+  font-family: Georgia;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1;
+  color: white;
+  transition: 0.4s;
+}
+.About:hover {
+  color: #9156ff;
+}
+.contact {
+  text-decoration: none;
+  font-family: Georgia;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1;
+  color: white;
+  transition: 0.4s;
+}
+.contact:hover {
+  color: #9156ff;
+}
+
+.outer {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 950px;
+  height: 309px;
+  border-radius: 103px;
+  background: linear-gradient(90deg, rgb(155, 4, 255), #6b21f5);
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 15px 25px 15px rgba(0, 0, 0, 0.5);
+  animation: toji 0.7s ease-out;
+}
+.main-container {
+  display: flex;
+  align-items: right;
+  justify-content: center;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 739px;
+  height: 159px;
+  border-radius: 70px;
+  background: linear-gradient(90deg, rgb(150, 13, 241), #8400ff);
+  border: 2px solid black;
+  box-shadow: 15px 25px 15px rgba(0, 0, 0, 0.25);
+  animation: scale 2s ease-in-out, move 2s ease-in infinite;
+}
+@keyframes scale {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+p {
+  font-family: "Aerial_Demo";
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1;
+  color: black;
+}
+
+@keyframes move {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(132, 39, 255);
+  z-index: 9999; /* stay on top */
+  animation: 1s fade-out ease-in forwards;
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #4daddd;
+  position: relative;
+  animation: bg 0.8s ease-out;
+}
+.profile {
+  width: 275px;
+  height: 259px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 90px;
+  left: 90px;
+  box-shadow: 38px 40px 28px rgba(0, 0, 0, 0.5);
+  animation: intro-1 0.5s ease-in, scale-2 0.6s ease-in;
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.outer-2 {
+  width: 884px;
+  height: 400px;
+  background-color: #146faf;
+  opacity: 0.32;
+  border-radius: 79px;
+  position: absolute;
+  top: 280px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 38px 40px 28px rgba(0, 0, 0, 0.5);
+  animation: intro 0.4s ease-in;
+}
+.main-2 {
+  background: linear-gradient(180deg, #2bb7c0, #800099);
+  width: 675px;
+  height: 286px;
+  border-radius: 49px;
+  position: absolute;
+  top: 340px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 38px 40px 28px rgba(0, 0, 0, 0.5);
+  animation: intro 0.4s ease-in ;
+}
+.p-1 {
+  position: absolute;
+  left: 15px;
+  font-family: "CreatoDisplay-Regular";
+  font-size: 32px;
+  letter-spacing: 4px;
+  font-weight: bold;
+  background: linear-gradient(180deg, #ffffff, #5e00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes intro {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@keyframes intro-1 {
+  0% {
+    opacity: 0%;
+    left: -250px;
+  }
+  100% {
+    opacity: 100%;
+    left: 90px;
+  }
+}
+
+.nav-container-2 {
+  position: absolute;
+  right: 55px;
+  top: 35px;
+  width: 756px;
+  height: 90px;
+  background-color: #4daddd;
+  border-radius: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 40px;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25);
+  gap: 150px;
+  animation: sukuna 0.5s ease-out;
+}
+
+.Home-2 {
+  font-family: Georgia;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1;
+  color: white;
+  transition: 0.4s;
+  text-decoration: none;
+}
+.Home-2:hover {
+  color: #1a6a92;
+}
+.About-2 {
+  font-family: Georgia;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1;
+  color: white;
+  transition: 0.4s;
+  text-decoration: none;
+}
+.About-2:hover {
+  color: #1a6a92;
+}
+.contact-2 {
+  text-decoration: none;
+  font-family: Georgia;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1;
+  color: white;
+  transition: 0.4s;
+}
+.contact-2:hover {
+  color: #4daddd;
+}
+
+@keyframes scale-2 {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bg {
+  0% {
+    background-color: #9156ff;
+  }
+  100% {
+    background-color: #4daddd;
+  }
+}
+
+.cover-1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(132, 39, 255);
+  z-index: 9999; /* stay on top */
+  animation: 0.3s fade-out ease-in forwards;
+}
+
+@keyframes sukuna {
+  0% {
+    right: -800px;
+  }
+  100% {
+    right: 55px;
+  }
+}
+
+@keyframes toji {
+  0% {
+    right: 1400px;
+  }
+  100% {
+    right: 0%;
+  }
+}
+
+@keyframes sukuna-2 {
+  0% {
+    right: -800px;
+  }
+  100% {
+    right: 55px;
+  }
+}
+
+@keyframes menu {
+  0% {
+    left: -55px;
+  }
+  100% {
+    left: 55px;
+  }
+}
